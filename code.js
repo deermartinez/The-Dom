@@ -9,4 +9,10 @@ document.body.style.fontFamily = "Arial,sans-serif";
 document.getElementById('nickname').textContent = 'Dusty';
 document.getElementById('favorites').textContent = 'board games and yarn';
 document.getElementById('hometown').textContent = 'Denver';
-
+// Iterate through each li and change the class to "list-item".
+var list = document.getElementsByTagName('li');
+for (var i = 0; i < list.length; i++) {
+    list[i].className = 'list-item';
+ }
+ 
+ // (In the HTML head) Add a style tag that sets a rule for .list-item to make the color red.
