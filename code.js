@@ -6,7 +6,7 @@ document.body.style.fontFamily = "Arial,sans-serif";
 
 
 // (In the JavaScript) Replace each of the spans (nickname, favorites, hometown) with your own information.
-document.getElementById('nickname').textContent = 'Kev';
-document.getElementById('favorites')
-
+document.getElementById('nickname').textContent = 'Dusty';
+document.getElementById('favorites').textContent = 'board games and yarn';
+document.getElementById('hometown').textContent = 'Denver';
 
