@@ -16,3 +16,9 @@ for (var i = 0; i < list.length; i++) {
  }
  
  // (In the HTML head) Add a style tag that sets a rule for .list-item to make the color red.
+
+// Create a new img element and set its src attribute to a picture of you. Append that element to the page. -->
+var myPicture= document.createElement('img');
+myPic.src = '';
+// Parent node is body, child is (myPic)
+document.body.appendChild(myPic);
