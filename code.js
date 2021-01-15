@@ -22,3 +22,14 @@ var myPicture= document.createElement('img');
 myPic.src = '';
 // Parent node is body, child is (myPic)
 document.body.appendChild(myPic);
+
+
+
+
+var place = document.getElementById('');//grabbing the picture you are oignt o change
+var picture = 'first image';//the image on index.html-what you are going to replace
+
+//manipulating the dom
+place.src = "second picture";
+//grabbing the variable we used to pull the picture = place
+//and changing the image =place.src
