@@ -17,21 +17,24 @@
         <li>Hometown: <span id="hometown"></span>
       </ul>
 
-      <form name="contactForm" onsubmit="return validateForm()" action="" method="get">
+      <form name="contactForm" id="form" onsubmit="return validateForm()" action="" method="get">
+        <!-- action is where a link to a page would go so all information would be stored -->
         <h2>Application Form</h2>
         <div class="row">
             <label>Full Name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" required>
+            <!-- //you can change attribute field by adding on end of input 
+            required wont let page go forward without all requirements fulfilled-->
             <div class="error" id="nameErr"></div>
         </div>
         <div class="row">
             <label>Email Address</label>
-            <input type="text" name="email" min="7">
+            <input type="text" name="email" min="7" rewuired max length="20">
             <div class="error" id="emailErr"></div>
         </div>
         <div class="row">
             <label>Mobile Number</label>
-            <input type="text" name="mobile">
+            <input type="text" name="mobile" pattern>
             <div class="error" id="mobileErr"></div>
         </div>
         <div class="row">
