@@ -61,4 +61,17 @@ if (email==" "){//if email is empty print error
 }
 
 
+//validate mobile
+
 //validate country
+
+//validate gender
+
+//validate hobbies
+
+//most can be copied from earlier validations
+
+
+//homework is make a form using html5
+//info on page 970 chapter review on client side validation
+//office hours are 12-1 and 7-8
