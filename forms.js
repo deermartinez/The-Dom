@@ -44,7 +44,21 @@ if (name==" "){//if name is empty print error
 }
 
 
-
-
 //validate email
 
+if (email==" "){//if email is empty print error
+    printError ("emailErr", "Please enter a valid email")
+}else{
+    var regex= /^\S+@S+\.\S+$/;
+    if(regex.test(email)=== false){
+        //regrex is pattern attribute
+        //if not matching pattern, print error
+        printError("emailErr", "Please enter a valid email");
+    } else {
+        printError("emailErr", "")
+        emailErr = false;
+    }
+}
+
+
+//validate country
