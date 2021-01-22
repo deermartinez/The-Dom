@@ -29,6 +29,8 @@ for (let i=0; i<checkboxes.length; i++){
 
 //
 var nameErr=emailErr=mobileErr=countryErr=genderErr=false;
+//validate each one
+
 if (name==" "){//if name is empty print error
     printError ("nameErr", "Please enter a valid name")
 }else{
@@ -40,6 +42,7 @@ if (name==" "){//if name is empty print error
     } else {
         printError("nameErr", "")
         nameErr = false;
+        //if all criterias are not met to send an error, it allows it
     }
 }
 
@@ -62,10 +65,38 @@ if (email==" "){//if email is empty print error
 
 
 //validate mobile
+if (mobile==" "){//if mobile is empty print error
+    printError ("mobileErr", "Please enter a valid number")
+}else{
+    var regex= /^[1-9]\d(9)$/;
+    if(regex.test(mobile)=== false){
+        //regrex is pattern attribute
+        //if not matching pattern, print error
+        printError("mobileErr", "Please enter a valid number");
+    } else {
+        printError("mobileErr", "")
+        mobileErr = false;
+    }
+}
 
 //validate country
+if (country=="Select"){//if country is empty print error
+    printError ("countryErr", "Please select your country")
+} else {
+printError("countryErr", "")
+        countryErr = false;
+    }
+
+
 
 //validate gender
+if (gender==false|| " "){//if gender is unselected print error
+    printError ("genderErr", "Please select your gender")
+} else {
+printError("genderErr", "")
+        genderErr = false;
+    }
+
 
 //validate hobbies
 
@@ -75,3 +106,61 @@ if (email==" "){//if email is empty print error
 //homework is make a form using html5
 //info on page 970 chapter review on client side validation
 //office hours are 12-1 and 7-8
+
+
+// function validate form
+
+var dataPreview = "You've entered the following details: \n" +
+            "Full Name: " + name + "\n" +
+            "Email Address: " + email + "\n" +
+            "Mobile Number: " + mobile + "\n" +
+            "Country:" + country + "\n" +
+            "Gender: " + gender + "\n"
+    if(hobbies.length){
+        dataPreview += "Hobbies: " + hobbies.join(", ");
+
+    }
+
+    alert(dataPreview);
+
+
+
+
+
+
+
+
+
+
+
+
+//Page 970
+
+// document.forms[3]
+// document.forms[1].element[2]
+// document.getElementById(country).value = "Mexico";
+// document.getElementById(country).focus//dont know how to do the focus on country within registration
+// Selection.options[]
+// var stateName = docment.getElementById("State").selected
+
+
+
+// var my picture='gif link'
+
+
+
+//create a function for madlibs
+function libIts(){
+    var storyDiv = document.getElementById('story');
+    var person = document.getElementById('person');
+    var adjective = document.getElementById('adjective');
+    var noun = document.getElementById('noun').value;
+    storyDiv.innerHTML = person + "is locked down" + adjective + " " + noun + "Wow this is great ";
+
+
+
+}
+
+
+var libButton = document.getElementById('lib-button');
+libButton.addEventListener('click', libIts);
