@@ -88,7 +88,7 @@ printError("countryErr", "")
     }
 
 
-
+//most can be copied from earlier validations
 //validate gender
 if (gender==false|| " "){//if gender is unselected print error
     printError ("genderErr", "Please select your gender")
@@ -97,20 +97,12 @@ printError("genderErr", "")
         genderErr = false;
     }
 
+//mkae sure the form cannot be submitted with errors
 
-//validate hobbies
-
-//most can be copied from earlier validations
-
-
-//homework is make a form using html5
-//info on page 970 chapter review on client side validation
-//office hours are 12-1 and 7-8
-
-
-// function validate form
-
-var dataPreview = "You've entered the following details: \n" +
+if ((nameErr|| emailErr||mobileErr||countryErr||genderErr)==true){
+    return false;
+}else{
+    var dataPreview = "You've entered the following details: \n" +
             "Full Name: " + name + "\n" +
             "Email Address: " + email + "\n" +
             "Mobile Number: " + mobile + "\n" +
@@ -122,16 +114,18 @@ var dataPreview = "You've entered the following details: \n" +
     }
 
     alert(dataPreview);
+    
+}
 
 
 
 
+//homework is make a form using html5
+//info on page 970 chapter review on client side validation
+//office hours are 12-1 and 7-8
 
 
-
-
-
-
+// function validate form
 
 
 //Page 970
@@ -149,18 +143,3 @@ var dataPreview = "You've entered the following details: \n" +
 
 
 
-//create a function for madlibs
-function libIts(){
-    var storyDiv = document.getElementById('story');
-    var person = document.getElementById('person');
-    var adjective = document.getElementById('adjective');
-    var noun = document.getElementById('noun').value;
-    storyDiv.innerHTML = person + "is locked down" + adjective + " " + noun + "Wow this is great ";
-
-
-
-}
-
-
-var libButton = document.getElementById('lib-button');
-libButton.addEventListener('click', libIts);
