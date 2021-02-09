@@ -37,12 +37,12 @@
         </div>
         <div class="row">
             <label>Mobile Number</label>
-            <input type="text" name="mobile" min="10" max="10" placeholder="XXXXXXXXXX">
+            <input type="text" name="mobile" min="10" max="10" placeholder="XXXXXXXXXX" required pattern ="[0-9]{10}">
             <div class="error" id="mobileErr"></div>
         </div>
         <div class="row">
             <label>Password</label>
-            <input type="password" name="password" placeholder="5+,Special Character"required pattern ="(?=.*)" min="5" >
+            <input type="password" name="password" placeholder="5+ Capital, Lowercase,Special Character"required pattern ="(?=^.{5,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" min="5" >
             <div class="error" id="mobileErr"></div>
         </div>
        

@@ -68,11 +68,11 @@ if (email==" "){//if email is empty print error
 if (mobile==" "){//if mobile is empty print error
     printError ("mobileErr", "Please enter a valid number")
 }else{
-    var regex= /^[1-9]\d(9)$/;
+    var regex= /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
     if(regex.test(mobile)=== false){
         //regrex is pattern attribute
         //if not matching pattern, print error
-        printError("mobileErr", "Please enter a valid number");
+        printError("mobileErr", "Please enter a valid 10 digit number");
     } else {
         printError("mobileErr", "")
         mobileErr = false;
@@ -80,7 +80,7 @@ if (mobile==" "){//if mobile is empty print error
 }
 
 //validate country
-if (country=="Select"){//if country is empty print error
+if (country==="Select"){//if country is empty print error
     printError ("countryErr", "Please select your country")
 } else {
 printError("countryErr", "")
